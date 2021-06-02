@@ -57,7 +57,7 @@ int main() {
 void topological_order(int v,vector<vector<int>> &adj,vector<bool>&used,stack<int>&order) {
     used[v] = true;
 
-    for (auto u : adj[v])
+    for (int u : adj[v])
         if (!used[u])
             topological_order(u,adj,used,order);
 
